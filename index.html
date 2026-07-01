@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta
+      name="description"
+      content="QuizVerse is a beautiful Frontend Quiz App built with HTML, CSS and JavaScript. Test your JavaScript, HTML and CSS skills."
+    />
+    <meta name="author" content="Azeem Malik" />
+    <title>QuizVerse | Frontend Quiz App</title>
+    <link rel="icon" type="image/png" href="./assets/brain.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="intro-loader" id="introLoader">
+      <div class="intro-content">
+        <div class="intro-logo">🧠</div>
+
+        <h1>QuizVerse</h1>
+
+        <p>Frontend Quiz Experience</p>
+      </div>
+    </div>
+    <button class="theme-btn" id="themeBtn">🌙</button>
+    <div class="container">
+      <div class="loader-screen" id="loaderScreen">
+        <div class="loader-card">
+          <div class="loader-logo">🧠</div>
+
+          <h2>QuizVerse</h2>
+
+          <p id="loadingText">Preparing your challenge...</p>
+
+          <div class="loader-progress">
+            <div class="loader-progress-fill" id="loaderProgress"></div>
+          </div>
+
+          <span id="loadingPercent">0%</span>
+        </div>
+      </div>
+      <div class="difficulty-box screen" id="difficultyBox">
+        <p class="welcome-badge">🚀 Portfolio Edition</p>
+        <h2>Frontend Quiz Arena</h2>
+        <p class="difficulty-subtitle">
+          Choose your challenge and start the quiz.
+        </p>
+
+        <button class="difficulty-btn easy">Easy</button>
+
+        <button class="difficulty-btn medium">Medium</button>
+
+        <button class="difficulty-btn hard">Hard</button>
+
+        <h3>Select Category</h3>
+
+        <div class="category-box">
+          <button class="category-btn active" data-category="js">
+            JavaScript
+          </button>
+
+          <button class="category-btn" data-category="html">HTML</button>
+
+          <button class="category-btn" data-category="css">CSS</button>
+
+          <button class="category-btn" data-category="mixed">Mixed</button>
+        </div>
+      </div>
+      <div class="quiz-box screen" id="quizBox">
+        <div class="quiz-header">
+          <div class="quiz-top">
+            <div>
+              <h2 id="quizTitle">JavaScript Arena Quiz</h2>
+
+              <p class="quiz-subtitle">
+                Test your knowledge and beat your best score.
+              </p>
+            </div>
+
+            <div class="quiz-stats">
+              <div class="stat-card">
+                <span>Question</span>
+                <strong id="progress"></strong>
+              </div>
+
+              <div class="stat-card">
+                <span>Time</span>
+                <strong id="timer"></strong>
+              </div>
+
+              <div class="stat-card">
+                <span>Streak</span>
+                <strong>
+                  <span id="streakIcon">🔥</span>
+                  <span id="streak">0</span>
+                </strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="question-section">
+          <p class="question-label">QUESTION</p>
+          <h3 id="question"></h3>
+
+          <div class="answers" id="answers">
+            <!-- <button class="answer-btn">Answer: 1</button>
+            <button class="answer-btn">Answer: 2</button>
+            <button class="answer-btn">Answer: 3</button>
+            <button class="answer-btn">Answer: 4</button> -->
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <button class="next-btn" id="nextBtn">Next Question →</button>
+        </div>
+      </div>
+
+      <div class="results-box screen" id="resultsBox">
+        <h2>Quiz Complete! 🎉</h2>
+
+        <div class="score-display">
+          <p class="score-text">Your Score</p>
+          <p class="score-number"></p>
+          <p class="score-percentage"></p>
+          <p class="best-score" id="bestScore"></p>
+        </div>
+
+        <div class="result-message" id="resultMessage"></div>
+        <div class="achievements" id="achievements"></div>
+        <div class="stats-box" id="statsBox"></div>
+        <div class="review-answers" id="reviewAnswers"></div>
+        <button class="restart-btn" id="restartBtn">Restart Quiz</button>
+      </div>
+      <div class="app-footer">
+        Made with ❤️ by <strong>Azeem Malik</strong> • QuizVerse © 2026
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
